@@ -10,4 +10,8 @@
     <result column="like" jdbcType="INTEGER" property="like" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
+
+    <update id="like">
+        update comment set `like`=(select `like` from comment where id=#{id})+1 where id=#{id}
+    </update>
 </mapper>
