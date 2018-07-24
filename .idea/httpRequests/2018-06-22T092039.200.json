@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "weight": 250,
+    "color": "红",
+    "classes": "CN",
+    "updateTime": "2018-05-21T04:08:18.000+0000",
+    "version": 1,
+    "deleteType": 0
+  },
+  {
+    "id": 2,
+    "weight": 270,
+    "color": "红",
+    "classes": "CN",
+    "updateTime": "2018-06-11T08:54:06.000+0000",
+    "version": 5,
+    "deleteType": 0
+  },
+  {
+    "id": 3,
+    "weight": 201,
+    "color": "红",
+    "classes": "AU",
+    "updateTime": null,
+    "version": 1,
+    "deleteType": 0
+  },
+  {
+    "id": 4,
+    "weight": 204,
+    "color": "绿",
+    "classes": "SN",
+    "updateTime": null,
+    "version": 0,
+    "deleteType": 0
+  },
+  {
+    "id": 5,
+    "weight": 205,
+    "color": "黄",
+    "classes": "US",
+    "updateTime": null,
+    "version": 0,
+    "deleteType": 0
+  },
+  {
+    "id": 7,
+    "weight": 200,
+    "color": "绿",
+    "classes": "AU",
+    "updateTime": null,
+    "version": 0,
+    "deleteType": 0
+  },
+  {
+    "id": 8,
+    "weight": 220,
+    "color": "红",
+    "classes": "CN",
+    "updateTime": null,
+    "version": 0,
+    "deleteType": 0
+  },
+  {
+    "id": 9,
+    "weight": 190,
+    "color": "绿",
+    "classes": "CN",
+    "updateTime": null,
+    "version": 0,
+    "deleteType": 0
+  }
+]

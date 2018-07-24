@@ -1,0 +1,48 @@
+GET http://localhost/apple/listByPage/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T092323.200.json
+
+###
+
+GET http://localhost/apple/listByPage/2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T092302.200.json
+
+###
+
+GET http://localhost/apple/listByPage/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T092039.200.json
+
+###
+
+GET http://localhost/apple/selectByPage/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T091934.404.json
+
+###
+
+GET http://localhost/apple/selectById/2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T091906.200.json
+
+###
+
+GET http://localhost/apple/selectById/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-06-22T091817.200.json
+
+###
+
