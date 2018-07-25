@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cenjil.boot.mapper.CommentMapper">
-  <resultMap id="BaseResultMap" type="com.cenjil.entity.Comment">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="point" jdbcType="INTEGER" property="point" />
-    <result column="like" jdbcType="INTEGER" property="like" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.cenjil.entity.Comment">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="point" jdbcType="INTEGER" property="point"/>
+        <result column="like" jdbcType="INTEGER" property="like"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
 
     <update id="like">
-        update comment set `like`=(select `like` from comment where id=#{id})+1 where id=#{id}
+        update comment set `like`=`like`+1 where id=#{id}
     </update>
+
+    <select id="selectByIds" resultType="com.cenjil.entity.Comment">
+        select * from comment where id in
+        <foreach collection="ids" index="i" open="(" separator="," close=")" item="id">
+            #{id}
+        </foreach>
+    </select>
 </mapper>

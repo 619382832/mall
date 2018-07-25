@@ -11,8 +11,7 @@ public class CommentService {
     private CommentMapper mapper;
 
     public boolean like(Integer id) {
-       boolean b=mapper.like(id)>0;
-       return  b;
+       return mapper.like(id)>0;
     }
 
 

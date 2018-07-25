@@ -15,9 +15,32 @@
         <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime"/>
         <result column="describe" jdbcType="LONGVARCHAR" property="describe"/>
     </resultMap>
+    <insert id="add">
+        insert into goods (price, discount, `describe`, picture, inventory, create_time )
+        values (#{good.price},#{good.discount},#{good.describe},#{good.picture},#{good.inventory},#{good.createTime})
+    </insert>
+
+    <update id="update">
+        update goods
+        <set>
+            <if test="good.price!=null and good.price!=''">
+                price=#{good.price},
+            </if>
+            <if test="good.discount!=null and good.discount!=''">
+                discount=#{good.discount},
+            </if>
+            <if test="good.picture!=null and good.picture!=''">
+                picture=#{good.picture},
+            </if>
+            <if test="good.describe!=null and good.describe!=''">
+                `describe`=#{good.describe},
+            </if>
+        </set>
+        where id=#{good.id}
+    </update>
 
     <select id="selectById" resultType="com.cenjil.entity.Goods">
-     select * from goods where id=#{id}
-  </select>
+      select * from goods where id=#{id}
+    </select>
 
 </mapper>
