@@ -20,6 +20,11 @@
         <foreach collection="ids" index="i" open="(" separator="," close=")" item="id">
             #{id}
         </foreach>
-        order by `like`
+    </select>
+    <insert id="review" parameterType="com.cenjil.entity.Comment">
+        insert into comment (review , point , create_time) value (#{c.review} , #{c.point} , now())
+    </insert>
+    <select id="look" resultType="com.cenjil.entity.Comment">
+        select * from comment where id = #{id}
     </select>
 </mapper>

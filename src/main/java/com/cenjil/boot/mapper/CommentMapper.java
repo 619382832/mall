@@ -16,4 +16,6 @@ public interface CommentMapper {
      * 查看一个商品对应的评论列表
      */
     List<Comment> selectByIds(@Param("ids") List<Integer> ids);
+    Integer review (@Param("c") Comment comment);
+    Comment look (Integer id);
 }
